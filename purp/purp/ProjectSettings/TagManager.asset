@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Building
+    uniqueID: 1102581501
+    locked: 0
   - name: Mora
     uniqueID: 1401272255
+    locked: 0
+  - name: Roofs
+    uniqueID: 1143816065
+    locked: 0
+  - name: UI
+    uniqueID: 3300979751
     locked: 0
