@@ -27,14 +27,34 @@ public class CameraFollow : MonoBehaviour {
 		Vector3 moddedVector = transform.position;
 		if (camVector.y < (transform.position.y - margin[0] )) {
 			moddedVector.y--;
+			if (camVector.y < (transform.position.y - (margin[0]*2))) {
+				smoothFactor = Mathf.Lerp(smoothFactor, Mathf.Abs(transform.position.y - (margin[0])) + 2, Time.deltaTime);
+			} else {
+				smoothFactor = Mathf.Lerp(smoothFactor, 2, Time.deltaTime);
+			}
 		} else if (camVector.y > (transform.position.y + margin[0])) {
 			moddedVector.y++;
+			if (camVector.y > (transform.position.y + (margin[0] * 2))) {
+				smoothFactor = Mathf.Lerp(smoothFactor, Mathf.Abs(transform.position.y + (margin[0])) + 2, Time.deltaTime);
+			} else {
+				smoothFactor = Mathf.Lerp(smoothFactor, 2, Time.deltaTime);
+			}
 		}
 
 		if (camVector.x < (transform.position.x - margin[1])) {
 			moddedVector.x--;
+			if (camVector.x < (transform.position.x - (margin[1] * 2))) {
+				smoothFactor = Mathf.Lerp(smoothFactor, Mathf.Abs(transform.position.x - (margin[1])) + 2, Time.deltaTime);
+			} else {
+				smoothFactor = Mathf.Lerp(smoothFactor, 2, Time.deltaTime);
+			}
 		} else if (camVector.x > (transform.position.x + margin[1])) {
 			moddedVector.x++;
+			if (camVector.x > (transform.position.x + (margin[1] * 2))) {
+				smoothFactor = Mathf.Lerp(smoothFactor, Mathf.Abs(transform.position.x + (margin[1])) + 2, Time.deltaTime);
+			} else {
+				smoothFactor = Mathf.Lerp(smoothFactor, 2, Time.deltaTime);
+			}
 		}
 
 		if (!(moddedVector == transform.position)) {

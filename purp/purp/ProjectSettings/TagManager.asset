@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Dirt
+    uniqueID: 4045677457
+    locked: 0
   - name: Building
     uniqueID: 1102581501
     locked: 0
