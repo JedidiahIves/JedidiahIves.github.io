@@ -9,6 +9,10 @@ public class PlaySound : MonoBehaviour {
 	bool alternate = true;
 	int Clip = 1;
 
+	private void Start() {
+		audioData = GetComponentsInChildren<AudioSource>();
+	}
+
 	public void playClip(int WhichSound) {
 		if (WhichSound == 0 || WhichSound == 1) {
 			Clip = (Clip == 0) ? 1 : 0;
