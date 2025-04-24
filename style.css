@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 /* Set global font size to 10pt (~13.3px) */
 html {
@@ -8,7 +8,8 @@ html {
 /* Base layout and typography */
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   color: #333;
   background: #fff;
   display: flex;
@@ -27,9 +28,10 @@ body {
   width: 200px;
   background-color: #fff;
   padding-top: 40px;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   z-index: 10;
 }
 
@@ -61,7 +63,7 @@ body {
   max-width: 600px;
   width: 90%;
   margin: 1em auto;
-  padding-bottom: 60px; /* Ensure spacing from bottom on all viewports */
+  padding-bottom: 60px;
 }
 
 .content-container h1,
@@ -130,6 +132,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-left: 0;
   }
 
   .sidebar a {
@@ -141,6 +144,6 @@ body {
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 60px; /* Increase to ensure spacing on small screens */
+    padding-bottom: 60px;
   }
 }
