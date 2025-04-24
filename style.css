@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Set global font size to 10pt (~13.3px) */
+html {
+  font-size: 13.3px;
+}
+
+/* Base layout and typography */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Sidebar layout and style */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #fff;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.sidebar a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.sidebar a:hover {
+  color: #ffcc33;
+}
+
+/* Main content area */
+.content {
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Shared content container styling */
+.content-container {
+  max-width: 600px;
+  width: 90%;
+  margin: 1em auto;
+  padding-bottom: 60px; /* Ensure spacing from bottom on all viewports */
+}
+
+.content-container h1,
+.content-container h2 {
+  font-weight: normal;
+  font-size: 1em;
+  margin-top: 1.5em;
+}
+
+.content-container .contact {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.content-container .contact p,
+.content-container .section p {
+  margin: 0.2em 0;
+  font-size: 1em;
+}
+
+.content-container .section {
+  margin-bottom: 1.5em;
+}
+
+.content-container .job-title {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.content-container .location {
+  font-style: italic;
+}
+
+.content-container .date {
+  float: right;
+}
+
+.content-container ul {
+  padding-left: 20px;
+}
+
+.content-container ul li {
+  margin-bottom: 0.4em;
+  font-size: 1em;
+}
+
+.content-container a {
+  color: #007acc;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* Responsive layout: sidebar becomes topbar */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar a {
+    margin: 0 15px;
+  }
+
+  .content {
+    padding: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px; /* Increase to ensure spacing on small screens */
+  }
+}
