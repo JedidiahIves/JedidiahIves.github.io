@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 
 /* Set global font size to 10pt (~13.3px) */
 html {
@@ -39,7 +39,7 @@ body {
   margin: 10px 0;
   text-decoration: none;
   color: #333;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 1em;
 }
 
@@ -66,9 +66,14 @@ body {
   padding-bottom: 60px;
 }
 
-.content-container h1,
+.content-container h1 {
+  font-weight: 400;
+  font-size: 1em;
+  margin-top: 1.5em;
+}
+
 .content-container h2 {
-  font-weight: normal;
+  font-weight: 300;
   font-size: 1em;
   margin-top: 1.5em;
 }
@@ -89,7 +94,7 @@ body {
 }
 
 .content-container .job-title {
-  font-weight: normal;
+  font-weight: 300;
   font-size: 1em;
 }
 
